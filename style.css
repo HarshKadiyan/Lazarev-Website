@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+/*Navigation bar (12-82) */
+nav{
+    color: #fff;
+    position: fixed;
+    /* background-color: aqua; */
+    display: flex;
+    height: 12vh;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2vw 10vw;
+    justify-content: space-between;
+    z-index: 10;
+}
+#nav-part2{
+    display: flex;
+    gap: 2vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
+}
+#nav-part2 h5{
+    margin-bottom: 1vw;
+    /* opacity: 0; */
+    display: none;
+    overflow: hidden;
+}
+#nav-part2 h5 span{
+    font-size: 0.77vw;
+    font-weight: 400;
+    display: inline-block;
+}
+#nav-part2 h4{
+    font-size: 0.76vw;
+    text-transform: uppercase;
+    font-size: 600;
+    margin-bottom: 2vw;
+}
+nav button{
+    background-color: #0DA34E;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 15px;
+    font-weight: 900;
+    font-size: 1vw;
+    border: none;
+    gap: 4vh;
+}
+nav button svg{
+    height: 1vw;
+    width: 1vw;
+    align-items: center;
+}
+
+#nav-bottom{
+    width: 80%;
+    height: 0vh;
+    position: absolute;
+    /* background-color: red; */
+    background-color: #111;
+    top: 100%;
+    z-index: 9;
+    border-bottom: 1px solid #fff;
+}
+
+/* nav:hover #nav-bottom{
+    height: 150%;
+    bottom: -150%;
+    background-color: #111;
+} */
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#page1 h1{
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 8.5vw;
+}
+
+#page1 h1 svg{
+    height: 6vw;
+    width: 6vw;
+    background-color: #0DA34E;
+    border-radius: 50%;
+}
+#page1 p{
+    text-align: center;
+    font-weight: 400;
+    margin-top: 3vh;
+}
+#page1-something{
+    display: flex;
+    align-items: center;
+}
+#page1-something h4{
+    font-weight: 400;
+    font-size: 1vw;
+    text-transform: lowercase;
+    margin-top: 0.5px;
+    padding: 5px 10px;
+    border: 1px solid #818181;
+    border-radius: 50px;
+}
+#page1-something h4:nth-last-child(2){
+    border: none;
+    padding: 2px;
+
+}
+/*Moving Div of logos (127-177) */
+#moving-div{
+    margin-top: 10vh;
+    position: absolute;
+    bottom: 3%;
+    white-space: nowrap;
+    padding: 1.2vw;
+    /* display: flex; */
+    overflow: hidden;
+    width: 44%;
+}
+#moving-div .move{
+   display: inline-block;
+   animation-name: mobe;                            /*used animation mobe and below are all animaation properties*/
+   animation-duration: 9s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+#moving-div .move img{
+    height: 1vw;
+    margin: 0 1vw;
+}
+
+/*Animation for moving logos*/
+@keyframes mobe {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+/*made 2 div left and right and gave the blur effect using linear gradient*/
+#blur-left{
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right,  #111,transparent );
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+#blur-right{
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right, transparent, #111 );
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+}
